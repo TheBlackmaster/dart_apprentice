@@ -48,4 +48,8 @@ print(evenOdd);
 // If testNumber is even, evenOdd is 0. If testNumber is odd,
 // evenOdd is 1. This is because the modulo operator (%) returns the remainder of the
 // division of testNumber by 2. If the remainder is 0, the number is even; if the remainder is 1, the number is odd.
+
+
+
+
 }
