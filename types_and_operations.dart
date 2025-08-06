@@ -29,4 +29,5 @@ const averageAge = (age1 + age2) / 2;
 print(averageAge.runtimeType); // Check the type of averageAge
 print(averageAge); // Print the value of averageAge
 
+
 }
