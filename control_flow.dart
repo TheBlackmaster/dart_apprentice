@@ -1,3 +1,5 @@
+import 'dart:math';
+
 // Mini-exercises
 // 1. Create a constant named myAge and initialize it with your age.
 // Write an if statement to print out “Teenager” 
@@ -11,6 +13,7 @@ enum AudioState {
   paused,
   stopped,
 }
+
 void main() {
 // if else-if statement and ternary conditional operator
   const myAge = 25;
@@ -52,4 +55,49 @@ switch (audioState) {
     break;
 }
 
+
+/////////////////////////////////// for loops and while loops
+///
+///
+
+///Mini-exercises
+// 1. Create a variable named counter and set it equal to 0.
+// Create a while loop with the condition counter < 10. 
+// The loop body should print out “counter is X” 
+// (where X is replaced with the value of counter) and then 
+// increment counter by 1.
+// 2. Write a for loop starting at 1 and ending with 10 inclusive.
+// Print the square of each number.
+// 3. Write a for-in loop to iterate over the following collection of numbers. 
+// Print the square root of each number.
+//   const numbers = [1, 2, 4, 7];
+// myNumbers.forEach((number) {
+//   print(number);
+// });
+// 1 2 3
+// 4. Repeat Mini-exercise 3 using a for Each loop.
+
+var counter = 0;
+while (counter < 10){
+  print('counter is $counter');
+  counter++;
+}
+
+
+double myNumbers = 1;
+for (int i = 1; i <= 10; i++) {
+  myNumbers = sqrt(i);
+  print(myNumbers);
+}
+
+
+const numbers = [1, 2, 4, 7];
+for (var number in numbers) {
+  print(sqrt(number));
+}
+
+
+numbers.forEach((number) {
+  print(sqrt(number));
+});
 }
