@@ -100,4 +100,42 @@ for (var number in numbers) {
 numbers.forEach((number) {
   print(sqrt(number));
 });
+
+
+
+// Challenge 1: Find the error
+// What’s wrong with the following code?
+// 
+//
+// const firstName = 'Bob';
+// if (firstName == 'Bob') {
+//   const lastName = 'Smith';
+// } else if (firstName == 'Ray') {
+//   const lastName = 'Wenderlich';
+// }
+// final fullName = firstName + ' ' + lastName;
+
+
+const firstName = 'Ray';
+var lastName = '';
+if (firstName == 'Bob') {
+ lastName = 'Smith';
+} else if (firstName == 'Ray') {
+  lastName = 'Wenderlich';
+}
+final fullName = firstName + ' ' + lastName;
+print(fullName);
+
+
+
+
+int countdown;
+for(int i = 10; i >= 0; i--) {
+  countdown = i;
+  if (countdown == 0) {
+    print('Blast off!');
+  } else {
+    print(countdown);
+  }
+}
 }
