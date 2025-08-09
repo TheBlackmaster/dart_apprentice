@@ -17,5 +17,30 @@ String youAreWonderful({required String? name, int numberPeople = 30}){
 }
 
 print(youAreWonderful(name:'Doat', numberPeople:10000));
+
+
+Function beerPriceCalculator(num priceOfBeer){
+  return (int numberOfBeers) {
+    return priceOfBeer * numberOfBeers;
+  };
+}
+
+final costOfBeer = beerPriceCalculator(350);
+print(costOfBeer(7));
+
+
+
+///////  ANOTHER EXAMPLE ///////
+///
+///
+///
+Function drugPriceCalc(num priceOfDrug){
+  return(num numberOfDrugs){
+    return priceOfDrug * numberOfDrugs;
+  };
+}
+
+final costOfDrugs = drugPriceCalc(1500);
+print('NGN${costOfDrugs(12)}');
 }
 
