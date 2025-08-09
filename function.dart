@@ -42,5 +42,10 @@ Function drugPriceCalc(num priceOfDrug){
 
 final costOfDrugs = drugPriceCalc(1500);
 print('NGN${costOfDrugs(12)}');
+
+List beers = ['legend', 'star', 'gulder', '33', 'climax'];
+beers.forEach((beer){
+  print('I love $beer beer');
+});
 }
 
