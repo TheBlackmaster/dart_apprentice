@@ -47,5 +47,12 @@ List beers = ['legend', 'star', 'gulder', '33', 'climax'];
 beers.forEach((beer){
   print('I love $beer beer');
 });
+
+
+Function bookCalculator(num priceOfBook) => (num numberOfBooks) => priceOfBook * numberOfBooks;
+
+final costOfBooks = bookCalculator(2000);
+print('NGN${costOfBooks(5)}');
 }
+
 
