@@ -5,6 +5,8 @@ void main(){
  printCities('jos', 'mangu', 'kano');
 
  printCountries('Nigeria', 'Zimbabwe');
+
+ print('The volume is ${findVolume(2, length: 3, breath: 4)}cm³');
 }
 
 void findPerimiter(int length,int width) {
@@ -30,4 +32,11 @@ void printCountries(String country1, [String? country2,String? country3] ) {
   print('City 1: $country1');
   print('City 2: $country2');
   print('City 3: $country3');
+}
+
+// Named Parameters
+// prevents errors where there are a large number of parameters
+
+int findVolume(int height, { int? breath, int? length}) {
+  return height * (breath! * length!);
 }
