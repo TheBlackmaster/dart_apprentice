@@ -1,93 +1,101 @@
 // CONTROL FLOW
-void main(){
+void main() {
   // If_Else Statement
 
-const favoriteBeer = 'Legend';
-var otherBeers = ['Heineken', 'Budweiser', 'Corona'];
+  const favoriteBeer = 'Legend';
+  var otherBeers = ['Heineken', 'Budweiser', 'Corona'];
 
-var beer;
+  var beer;
 
-beer = 'Legend';
+  beer = 'Legend';
 
-if (beer == favoriteBeer){
-  print('i love to drink $favoriteBeer');
-} else if (otherBeers.contains(beer)) {
-  print('I like $beer too');
-} else {
-  print('This is not a beer');
-}
+  if (beer == favoriteBeer) {
+    print('i love to drink $favoriteBeer');
+  } else if (otherBeers.contains(beer)) {
+    print('I like $beer too');
+  } else {
+    print('This is not a beer');
+  }
 
-// Short Code
+  // Short Code
 
-var myProfession = 'Pharmacist';
+  var myProfession = 'Pharmacist';
 
-// Using a ternary conditional operator for concise code
-print(myProfession == 'Pharmacist' ? 'Pharm' : 'Not Pharm');
+  // Using a ternary conditional operator for concise code
+  print(myProfession == 'Pharmacist' ? 'Pharm' : 'Not Pharm');
 
+  // CONDITIONAL EXPRESSION
 
-// CONDITIONAL EXPRESSION
+  var age = 20;
+  var canVote = age >= 18 ? 'Yes' : 'No';
+  print('Can vote: $canVote');
 
-var age = 20;
-var canVote = age >= 18 ? 'Yes' : 'No';
-print('Can vote: $canVote');
+  // SWITCH STATEMENT
 
+  var grade = 'B';
 
-// SWITCH STATEMENT
+  switch (grade) {
+    case 'A':
+      print('Excellent');
+      break;
+    case 'B':
+      print('Good');
+      break;
+    case 'C':
+      print('Average');
+      break;
+    case 'D':
+      print('Below Average');
+      break;
+    default:
+      print('Fail');
+  }
 
-var grade = 'B';
+  // Control Flow Statements
+  // Loop Control Statements
 
-switch (grade) {
-  case 'A':
-    print('Excellent');
-    break;
-  case 'B':
-    print('Good');
-    break;
-  case 'C':
-    print('Average');
-    break;
-  case 'D':
-    print('Below Average');
-    break;
-  default:
-    print('Fail');
-}
+  // For Loop
+  var mantra = 'I will become a Dart expert';
+  for (var i = 1; i <= 10; i++) {
+    print('$mantra - Iteration $i');
+  }
 
+  // While Loop
+  var i = 1;
+  while (i <= 10) {
+    print('$mantra - Iteration $i');
+    i++;
+  }
 
-// Control Flow Statements
-// Loop Control Statements
+  var number = 10;
 
-// For Loop
-var mantra = 'I will become a Dart expert';
-for (var i = 1; i <= 10; i++) {
-  print('$mantra - Iteration $i');  
-}
+  while (number >= 1) {
+    print('this number is $number');
+    number--;
+  }
+  // Do-While Loop
 
-// While Loop
-var i = 1;
-while(i <= 10) {
-  print('$mantra - Iteration $i');
-  i++;
-}
+  var dig = 1;
+  do {
+    print('I love gogoro $dig');
+    dig++;
+  } while (dig <= 10);
 
-var number = 10;
+  // break and continue statements
 
-while(number >= 1) {
-print('this number is $number');
-number--;
-}
-// Do-While Loop
+  outerLoop: for (int j = 1; j <= 3; j++) {
+    print(j);
 
-var dig = 1;
-do{
-  print('I love gogoro $dig');
-  dig++;
+    for (int k = 1; k <= 10; k++) {
+      print('$j $k');
 
-}while(dig <= 10);
+      if (j == 2 && k == 2) {
+        print('Breaking out of the loop');
+        break outerLoop; // Exits the inner loop when j is 2 and k is 5
+      }
+      if (k == 3) {}
+    }
+  }
 
-
-// For-Each Loop
-
-
-
+  // For-Each Loop
 }
