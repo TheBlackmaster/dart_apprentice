@@ -77,6 +77,15 @@ print('this number is $number');
 number--;
 }
 // Do-While Loop
+
+var dig = 1;
+do{
+  print('I love gogoro $dig');
+  dig++;
+
+}while(dig <= 10);
+
+
 // For-Each Loop
 
 
