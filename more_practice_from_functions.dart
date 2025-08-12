@@ -97,5 +97,18 @@ void main() {
     }
   }
 
-  // For-Each Loop
+
+// Continue
+for (int a = 1; a <= 10; a++) {
+  // print(a);
+if(a == 5){
+    print('Skipping number 5');
+    continue; // Skips the rest of the loop iteration when a is 5
+  }
+print(a);
 }
+  
+}
+
+
+  // For-Each Loop
