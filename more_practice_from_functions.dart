@@ -19,11 +19,36 @@ if (beer == favoriteBeer){
 
 // Short Code
 
-var myProfession = 'Phaermacist';
+var myProfession = 'Pharmacist';
 
 // Using a ternary conditional operator for concise code
 print(myProfession == 'Pharmacist' ? 'Pharm' : 'Not Pharm');
 
 
 // CONDITIONAL EXPRESSION
-}
+
+var age = 20;
+var canVote = age >= 18 ? 'Yes' : 'No';
+print('Can vote: $canVote');
+
+
+// SWITCH STATEMENT
+
+var grade = 'B';
+
+switch (grade) {
+  case 'A':
+    print('Excellent');
+    break;
+  case 'B':
+    print('Good');
+    break;
+  case 'C':
+    print('Average');
+    break;
+  case 'D':
+    print('Below Average');
+    break;
+  default:
+    print('Fail');
+}}
