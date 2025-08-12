@@ -51,4 +51,34 @@ switch (grade) {
     break;
   default:
     print('Fail');
-}}
+}
+
+
+// Control Flow Statements
+// Loop Control Statements
+
+// For Loop
+var mantra = 'I will become a Dart expert';
+for (var i = 1; i <= 10; i++) {
+  print('$mantra - Iteration $i');  
+}
+
+// While Loop
+var i = 1;
+while(i <= 10) {
+  print('$mantra - Iteration $i');
+  i++;
+}
+
+var number = 10;
+
+while(number >= 1) {
+print('this number is $number');
+number--;
+}
+// Do-While Loop
+// For-Each Loop
+
+
+
+}
