@@ -79,6 +79,20 @@ void main() {
   // 8. Simple Interest Calculator
   final interest = standardInterestCalc(principal: 20000, time: 2, rate: 15);
   print(interest);
+
+  // 9. FizzBuzz challenge
+  for(int i = 1; i <= 50; i++){
+    if((i % 3 == 0) && (i % 5 == 0)){  // Check this FIRST
+      print('FizzBuzz');
+    } else if(i % 3 == 0){
+      print('Fizz');
+    } else if(i % 5 == 0){
+      print('Buzz'); 
+    } else{
+      print(i);
+    }
+  }
+
 }
 
 double standardInterestCalc({int principal = 0, int rate = 0, int time = 0}) {
