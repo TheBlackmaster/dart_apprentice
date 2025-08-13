@@ -65,6 +65,7 @@ void main() {
     print('there we have it');
   }
 
+  // 7. Grocery List Manager
   List groceryItems = ['cabbage', 'lettuce', 'onions'];
   print('The current grocery items are $groceryItems');
 
@@ -74,6 +75,14 @@ void main() {
 
   removeItem(groceryItems, 'lettuce');
   print('The updated list is $groceryItems');
+
+  // 8. Simple Interest Calculator
+  final interest = standardInterestCalc(principal: 20000, time: 2, rate: 15);
+  print(interest);
+}
+
+double standardInterestCalc({int principal = 0, int rate = 0, int time = 0}) {
+  return (principal * rate * time) / 100;
 }
 
 int sumNumbers(int start, int end) {
