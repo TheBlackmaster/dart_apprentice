@@ -1,3 +1,5 @@
+import 'dart:math';
+
 void main(){
 // More Practice
 
@@ -33,4 +35,33 @@ var lastName = ' Azi-Gwom';
 
 final fullName = firstName + lastName;
 print('Hello, $fullName');
+
+ // 3.1
+  for(int i = 1; i <= 10; i++){
+    print(i);
+  }
+  
+  for(int e =1; e <= 20; e++){
+    if(e % 2 == 0){
+      print(e);
+    }
+  }
+  
+  // 3.2
+  int n = 0;
+  while(n < 5){
+    n++;
+    print('The square of $n is ${n * n}');
+  }
+  
+  Random random = Random();
+  int randomNumber;
+  
+  do{
+    randomNumber = random.nextInt(6);
+    print('random number = $randomNumber');
+  } while(randomNumber != 0);
+  
+  
+  print('Loop ended because we got 0!');
 }
