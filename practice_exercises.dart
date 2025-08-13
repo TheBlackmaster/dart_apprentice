@@ -1,75 +1,89 @@
 import 'dart:math';
 
-void main(){
-  // 
-  // Personal Info Card
+void main() {
+  //
+  // 1. Personal Info Card
   var name = 'Moses';
   int age = 26;
   var favoruteHobby = 'Drinking';
 
-  print('My name is $name, I am $age years old and my favorite hobby is $favoruteHobby.');
+  print(
+    'My name is $name, I am $age years old and my favorite hobby is $favoruteHobby.',
+  );
 
   //
-  // Tenperature Conversion
+  // 2. Tenperature Conversion
   double temp = 30.5; // Temperature in Celsius
-  double tempInFahrenheit = (temp * 9/5) + 32;
+  double tempInFahrenheit = (temp * 9 / 5) + 32;
   print('The temperature in Fahrenheit is $tempInFahrenheit°F.');
 
   //
-  // Multiplication Table
+  // 3. Multiplication Table
   int num = 5;
-  for(int i = 1; i <=12; i++){
+  for (int i = 1; i <= 12; i++) {
     print('$num x $i = ${num * i}');
   }
 
+  //
+  // 4. Even and odd numbers
+  for (int i = 1; i <= 20; i++) {
+    // print(i);
 
-  //  
-// Even and odd numbers
-for(int i = 1; i <=20; i++){
-  // print(i);
-  
-  if(i % 2 == 0){
-    print('$i is an even number');
-  } else{
-    print('$i is an odd number');
+    if (i % 2 == 0) {
+      print('$i is an even number');
+    } else {
+      print('$i is an odd number');
+    }
   }
-}
 
-//
-// Sum of numbers function
-print(sumNumbers(1,55)); // this is the called function
+  //
+  // 5. Sum of numbers function
+  print(sumNumbers(1, 55)); // this is the called function
 
-// 
-// Guess the number
+  //
+  // 6. Guess the number
 
-final secretNumber = Random().nextInt(4);
-int guess = 3;
+  final secretNumber = Random().nextInt(4);
+  int guess = 3;
 
-print(secretNumber);
-print(guess);
+  print(secretNumber);
+  print(guess);
 
+  while (guess != secretNumber) {
+    if (guess < secretNumber) {
+      print('too low');
+    } else if (guess > secretNumber) {
+      print('too high');
+    } else {
+      print('error');
+    }
 
-while(guess != secretNumber){
-  if(guess < secretNumber){
-    print('too low');
-  } else if(guess > secretNumber){
-    print('too high');
-  } else{
-    print('error');
+    break;
   }
-  
-  break;
-}
 
-  if(guess == secretNumber){
+  if (guess == secretNumber) {
     print('there we have it');
   }
+
+  List groceryItems = ['cabbage', 'lettuce', 'onions'];
+  print('The current grocery items are $groceryItems');
+
+  for (int i = 0; i < groceryItems.length; i++) {
+    print(groceryItems[i]);
+  }
+
+  removeItem(groceryItems, 'lettuce');
+  print('The updated list is $groceryItems');
 }
 
-int sumNumbers(int start, int end){
+int sumNumbers(int start, int end) {
   int sum = 0;
-  for(int i = start; i <= end; i++){
+  for (int i = start; i <= end; i++) {
     sum += i;
   }
   return sum;
+}
+
+void removeItem(List list, String item) {
+  list.remove(item);
 }
