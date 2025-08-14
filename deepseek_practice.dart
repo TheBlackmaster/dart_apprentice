@@ -78,29 +78,29 @@ void main() {
   }
 
   // 4.1
-greet('Moses');
+  greet('Moses');
 
-// 4.2
-print(calculateArea(breadth: 3,length:5));
+  // 4.2
+  print(calculateArea(breadth: 3, length: 5));
 
-// 4.3
-isEven(0);
+  // 4.3
+  isEven(0);
 }
 
-
-
 ///////////////// FUNCTIONS /////////////////////////
-void greet(String name){
+void greet(String name) {
   print('Hello $name');
 }
 
-int calculateArea({int? length, int? breadth}){
+int calculateArea({int? length, int? breadth}) {
   return length! * breadth!;
 }
 
-void isEven(i){
-  for(int i = 1; i <= 20; i++){
-    if(i % 2 == 0){
+void isEven(i) {
+  for (int i = 1; i <= 20; i++) {
+    if (i % 2 == 0) {
       print(i);
     }
-    }}
+  }
+}
+
