@@ -17,7 +17,7 @@ void main(){
   try{
   int result = 12 ~/ 0;
   print(result);
-} on IntegerDivisionByZeroException{
+} on UnsupportedError{
   print('Cannot divide by 0');
 }
 
@@ -53,5 +53,26 @@ void main(){
   print('This is finally clause and it is always executed');
 }
 
+/////////////////////
+/// CUSTOM EXCEPTION CLASS
+try {
+    depositMoney(-250);
+  } catch (e) {
+    print((e as DepositException).errorMessage());
+  }
 
+
+}
+
+class DepositException implements Exception{
+  String errorMessage(){
+    return 'You cannot enter amount less than 0';
+  }
+}
+
+
+void depositMoney(int amount){
+  if (amount < 0){
+    throw new DepositException();
+  }
 }
