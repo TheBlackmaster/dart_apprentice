@@ -1,47 +1,32 @@
-void main(){
-final user = User()
-    ..name = 'Moses'
-    ..id = 1; // cascade notation
-
-print(user);
-print(user.toJson());
-
-Password password = Password()
-        ..value = '308403';
+void main() {
+  Password password = Password()
+    ..value = '308403';
         
-  print(password);
-  print(password.isValid());
+  print(password);            // prints: 308403
+  print(password.value);      // prints: 308403
+  print(password.isValid());  // prints: false
+  print(password.strength());
 }
 
-
-
-class User{
-  int id = 0;
-  String name = '';
-
-String toJson() {
-  return '{"id":$id,"name":"$name"}';
-} // string to json
-
- @override
-  String toString(){
-    return 'User: id = $id, name = $name';
-  }
-}
-
-
-
-
-
-class Password{
+class Password {
   String value = '';
   
-  bool isValid(){
-    return value.length > 8;
+  bool isValid() {
+    return value.length > 8;   // must return true/false
+  }
+  
+  String strength(){
+    if(value.length < 5){
+      return 'Weak';
+    } else if(value.length >= 5 && value.length <= 8){
+      return 'Medium';
+    } else {
+      return 'Strong';
+    }
   }
   
   @override
-  String toString(){
-    return value;
+  String toString() {
+    return value;              // just return the string
   }
 }
