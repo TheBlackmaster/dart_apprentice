@@ -86,6 +86,10 @@ $id2
   });
 
   print(oddFigures);
+
+  // reduce method
+  final sum = figures.reduce((value, element) => value + element);
+  print(sum);
 }
 
 ////////////////// FUNCTIONS //////////////////
